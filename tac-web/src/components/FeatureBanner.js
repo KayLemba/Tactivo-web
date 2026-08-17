@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useReveal from '../hooks/useReveal';
 
 function FeatureBanner() {
@@ -30,7 +31,7 @@ function FeatureBanner() {
             <li>Scheduled maintenance &amp; callout support</li>
             <li>Staff training &amp; handover</li>
           </ul>
-          <a href="#contact" className="btn btn-primary">Start a Project</a>
+          <Link to="/contact" className="btn btn-primary">Start a Project</Link>
         </div>
       </div>
     </section>

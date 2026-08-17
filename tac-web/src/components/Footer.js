@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import LogoMark from './Logo';
 
 function Footer() {
@@ -25,19 +26,19 @@ function Footer() {
 
         <div className="footer-col">
           <h5>Company</h5>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#maestro">Maestro</a>
-          <a href="#team">Team</a>
-          <a href="#contact">Contact</a>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/maestro">Maestro</Link>
+          <Link to="/team">Team</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         <div className="footer-col">
           <h5>Services</h5>
-          <a href="#services">Forecourt Solutions</a>
-          <a href="#services">IT Solutions</a>
-          <a href="#services">Fuel Automation</a>
-          <a href="#services">Surveillance &amp; Access Control</a>
+          <Link to="/services">Forecourt Solutions</Link>
+          <Link to="/services">IT Solutions</Link>
+          <Link to="/services">Fuel Automation</Link>
+          <Link to="/services">Surveillance &amp; Access Control</Link>
         </div>
 
         <div className="footer-col footer-newsletter">
@@ -54,7 +55,7 @@ function Footer() {
       <div className="wrap footer-row">
         <p>© {new Date().getFullYear()} Tactivo Technologies. Lusaka, Zambia.</p>
         <div className="footer-links">
-          <span className="placeholder-note">tactivotechnologies@gmail.com &amp; +260973238632 </span>
+          <span className="placeholder-note">Add company email &amp; phone here</span>
         </div>
       </div>
     </footer>

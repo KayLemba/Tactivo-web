@@ -10,8 +10,6 @@ function About() {
       <div className="wrap">
         <div className="about-grid">
           <div className="about-copy reveal" ref={ref1}>
-            <span className="eyebrow">Since 2021</span>
-            <h2>Built by engineers who saw the gap.</h2>
             <p>
               Tactivo Technologies was founded by a team of visionary engineers and IT specialists
               who recognised a critical need: integrated technology to modernise and secure

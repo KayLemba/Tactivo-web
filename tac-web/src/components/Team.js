@@ -9,17 +9,12 @@ const SEATS = [
 ];
 
 function Team() {
-  const headRef = useReveal();
   const gridRef = useReveal();
 
   return (
-    <section className="section team-section" id="team">
+    <section className="section section--flush-top team-section" id="team">
       <div className="wrap">
-        <div className="section-head reveal" ref={headRef}>
-          <span className="eyebrow">Behind the Work</span>
-          <h2>Great results depend on a skilled team.</h2>
-          <p>Profiles for our engineering and support team are coming soon.</p>
-        </div>
+        <p className="team-intro">Profiles for our engineering and support team are coming soon.</p>
 
         <div className="team-grid reveal in" ref={gridRef}>
           {SEATS.map((role) => (

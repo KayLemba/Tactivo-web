@@ -2,23 +2,12 @@ import React from 'react';
 import useReveal from '../hooks/useReveal';
 
 function Maestro() {
-  const headRef = useReveal();
   const centralRef = useReveal();
   const liteRef = useReveal();
 
   return (
-    <section className="section maestro-section" id="maestro">
+    <section className="section section--flush-top maestro-section" id="maestro">
       <div className="wrap">
-        <div className="section-head reveal" ref={headRef}>
-          <span className="eyebrow eyebrow--maestro">Tactivo's Control System</span>
-          <h2>One system. Two ways to run it.</h2>
-          <p>
-            Maestro is the software layer behind Tactivo's fuel infrastructure — connecting your
-            stations, your controllers, and your data into a single, trusted system. It comes in
-            two forms, built for two different jobs.
-          </p>
-        </div>
-
         <div className="maestro-cards">
           <div className="maestro-card central reveal" ref={centralRef}>
             <span className="maestro-tag">Maestro Central</span>

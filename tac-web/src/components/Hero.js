@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 
 import fuelPump from '../assets/gallery/fuel-pump.jpg';
@@ -41,8 +42,8 @@ function Hero() {
             the server.
           </p>
           <div className="hero-ctas">
-            <a href="#services" className="btn btn-primary">Explore Solutions</a>
-            <a href="#maestro" className="btn btn-ghost">Meet Maestro</a>
+            <Link to="/services" className="btn btn-primary">Explore Solutions</Link>
+            <Link to="/maestro" className="btn btn-ghost">Meet Maestro</Link>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import LogoMark from './Logo';
 import { useTheme } from '../context/ThemeContext';
 
@@ -14,19 +15,22 @@ function Navbar() {
   }, []);
 
   const closeNav = () => setNavOpen(false);
+  const navClass = ({ isActive }) => (isActive ? 'active' : undefined);
 
   return (
     <header className={scrolled ? 'scrolled' : ''}>
       <nav className="wrap">
-        <a href="#top" className="brand">
+        <Link to="/" className="brand" onClick={closeNav}>
           <LogoMark />
           <span className="brand-name">TACTIVO <span>TECHNOLOGIES</span></span>
-        </a>
+        </Link>
         <ul className={`nav-links${navOpen ? ' open' : ''}`}>
-          <li><a href="#about" onClick={closeNav}>About</a></li>
-          <li><a href="#services" onClick={closeNav}>Services</a></li>
-          <li><a href="#maestro" onClick={closeNav}>Maestro</a></li>
-          <li><a href="#contact" className="nav-cta" onClick={closeNav}>Get in Touch</a></li>
+          <li><NavLink to="/" end className={navClass} onClick={closeNav}>Home</NavLink></li>
+          <li><NavLink to="/about" className={navClass} onClick={closeNav}>About</NavLink></li>
+          <li><NavLink to="/services" className={navClass} onClick={closeNav}>Services</NavLink></li>
+          <li><NavLink to="/maestro" className={navClass} onClick={closeNav}>Maestro</NavLink></li>
+          <li><NavLink to="/team" className={navClass} onClick={closeNav}>Team</NavLink></li>
+          <li><NavLink to="/contact" className="nav-cta" onClick={closeNav}>Get in Touch</NavLink></li>
           <li className="theme-toggle-mobile">
             <button
               type="button"
