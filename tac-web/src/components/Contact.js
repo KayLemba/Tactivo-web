@@ -22,15 +22,15 @@ function Contact() {
 
             <div className="contact-info-item">
               <div className="l">Location</div>
-              <div className="v">Lusaka, Zambia</div>
+              <div className="v">Lusaka, Zambia — next to Shaan Carriers and General Dealers, Off Mungwi Road</div>
             </div>
             <div className="contact-info-item">
               <div className="l">Email</div>
-              <div className="placeholder-note">tactivotechnologies@gmail.com</div>
+              <div className="placeholder-note">coming soon</div>
             </div>
             <div className="contact-info-item">
               <div className="l">Phone</div>
-              <div className="placeholder-note">260970106075</div>
+              <div className="placeholder-note">coming soon</div>
             </div>
           </div>
 
@@ -56,6 +56,16 @@ function Contact() {
             <button type="submit" className="btn btn-primary btn-submit">Send Message</button>
             <p className="form-status">{status}</p>
           </form>
+        </div>
+
+        <div className="map-block reveal in">
+          <iframe
+            title="Tactivo Technologies location — near Shaan Carriers, Mungwi Road, Lusaka"
+            src="https://www.google.com/maps?q=Shaan\+Carriers,+Mungwi+Road,+Lusaka,+Zambia&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>

@@ -55,7 +55,7 @@ function Footer() {
       <div className="wrap footer-row">
         <p>© {new Date().getFullYear()} Tactivo Technologies. Lusaka, Zambia.</p>
         <div className="footer-links">
-          <span className="placeholder-note">tactivotechnologies@gmail.com &amp; 260970106075</span>
+          <span className="placeholder-note">Add company email &amp; phone here</span>
         </div>
       </div>
     </footer>

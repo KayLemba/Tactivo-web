@@ -4,6 +4,7 @@ import useReveal from '../hooks/useReveal';
 const CORE_SERVICES = [
   {
     title: 'Forecourt Solutions',
+    slug: 'forecourt-solutions',
     desc: 'Everything for your forecourt — from fuel tanks and dispensers to automation — delivered as one seamless system built to maximise profit and uptime.',
     tags: ['Design', 'Installation', 'Compliance'],
     img: 'https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=200&h=200&q=70',
@@ -24,6 +25,7 @@ const CORE_SERVICES = [
   },
   {
     title: 'IT Solutions',
+    slug: 'it-solutions',
     desc: 'Total control over your business, with trusted solutions in surveillance, networking, and solar energy that keep your operation always on.',
     tags: ['Surveillance', 'LAN/WAN', 'Software Dev', 'Intercom', 'Solar'],
     img: 'https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=200&h=200&q=70',
@@ -44,6 +46,7 @@ const CORE_SERVICES = [
   },
   {
     title: 'Fuel Tank / UST / AST',
+    slug: 'fuel-tank',
     desc: 'Built to last, our underground and aboveground storage tanks provide a safe, reliable foundation for your fuel operations — securely stored and fully compliant.',
     tags: ['UST', 'AST', 'Leak Protection'],
     img: 'https://images.unsplash.com/31/khLPhykbRGiQmBGR4V6K__DSC1730.jpg?auto=format&fit=crop&w=200&h=200&q=70',
@@ -64,6 +67,7 @@ const CORE_SERVICES = [
   },
   {
     title: 'Fuel Dispensers',
+    slug: 'fuel-dispensers',
     desc: 'Maximise every transaction with high-flow dispensers built for speed and reliability — engineered for zero downtime and more throughput at the pump.',
     tags: ['High-Flow', 'Multi-Product'],
     img: 'https://images.unsplash.com/photo-1758362066807-39825a297aa4?auto=format&fit=crop&w=200&h=200&q=70',
@@ -84,6 +88,7 @@ const CORE_SERVICES = [
   },
   {
     title: 'Fuel Automation',
+    slug: 'fuel-automation',
     desc: 'Total control over your fuel, drop by drop. Intelligent automation tracks every litre, eliminates waste, and cuts operating costs.',
     tags: ['Real-Time Tracking', 'Loss Prevention'],
     img: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=200&h=200&q=70',
@@ -104,6 +109,7 @@ const CORE_SERVICES = [
   },
   {
     title: 'Surveillance & Access Control',
+    slug: 'surveillance-access-control',
     desc: 'See every corner of your site and control exactly who gets in. CCTV coverage and access control systems built for round-the-clock protection.',
     tags: ['CCTV Cameras', 'Access Control', 'Remote Monitoring'],
     img: 'https://images.unsplash.com/photo-1529265895721-65945a176cff?auto=format&fit=crop&w=200&h=200&q=70',
@@ -131,51 +137,51 @@ function Services() {
     <section className="section section--flush-top" id="services">
       <div className="wrap">
         <div className="capability-strip reveal" ref={stripRef}>
-          <div className="capability-item">
+          <a href="#it-solutions" className="capability-item">
             <img
               className="cap-illustration cap-photo"
-              src="https://images.unsplash.com/photo-1698752822107-69f8973936e4?auto=format&fit=crop&w=200&q=70"
-              alt="Solar panel array"
+              src="https://images.unsplash.com/photo-1680691257251-5fead813b73e?auto=format&fit=crop&w=300&q=70"
+              alt="IT solutions — network patch panel"
             />
-            <span>Solar</span>
-          </div>
-          <div className="capability-item">
+            <span>IT Solutions</span>
+          </a>
+          <a href="#it-solutions" className="capability-item">
             <img
               className="cap-illustration cap-photo"
-              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=200&q=70"
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=300&q=70"
               alt="Network cabling and switches"
             />
             <span>Network</span>
-          </div>
-          <div className="capability-item">
+          </a>
+          <a href="#forecourt-solutions" className="capability-item">
             <img
               className="cap-illustration cap-photo"
-              src="https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=200&q=70"
+              src="https://images.unsplash.com/photo-1727483771218-c1cc488d020c?auto=format&fit=crop&w=300&q=70"
               alt="Forecourt canopy and fuel pumps"
             />
             <span>Forecourt</span>
-          </div>
-          <div className="capability-item">
+          </a>
+          <a href="#fuel-tank" className="capability-item">
             <img
               className="cap-illustration cap-photo"
-              src="https://images.unsplash.com/31/khLPhykbRGiQmBGR4V6K__DSC1730.jpg?auto=format&fit=crop&w=200&q=70"
+              src="https://images.unsplash.com/31/khLPhykbRGiQmBGR4V6K__DSC1730.jpg?auto=format&fit=crop&w=300&q=70"
               alt="Industrial fuel storage tanks"
             />
             <span>Storage</span>
-          </div>
-          <div className="capability-item">
+          </a>
+          <a href="#surveillance-access-control" className="capability-item">
             <img
               className="cap-illustration cap-photo"
-              src="https://images.unsplash.com/photo-1529265895721-65945a176cff?auto=format&fit=crop&w=200&q=70"
+              src="https://images.unsplash.com/photo-1529265895721-65945a176cff?auto=format&fit=crop&w=300&q=70"
               alt="CCTV security cameras"
             />
             <span>Security</span>
-          </div>
+          </a>
         </div>
 
         <div className="services-list">
           {CORE_SERVICES.map((s, i) => (
-            <div className={`service-detail reveal in${i % 2 ? ' service-detail--rev' : ''}`} key={s.title}>
+            <div className={`service-detail reveal in${i % 2 ? ' service-detail--rev' : ''}`} key={s.title} id={s.slug}>
               <div className="service-detail-media">
                 <img src={s.img.replace('w=200&h=200', 'w=640&h=520')} alt={s.imgAlt} loading="lazy" />
               </div>

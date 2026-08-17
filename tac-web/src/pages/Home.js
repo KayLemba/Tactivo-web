@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import AboutTeaser from '../components/AboutTeaser';
 import FeatureBanner from '../components/FeatureBanner';
 import Gallery from '../components/Gallery';
+import PartnersStrip from '../components/PartnersStrip';
 import CtaBanner from '../components/CtaBanner';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -15,6 +16,7 @@ function Home() {
       <AboutTeaser />
       <FeatureBanner />
       <Gallery />
+      <PartnersStrip />
       <CtaBanner />
     </>
   );

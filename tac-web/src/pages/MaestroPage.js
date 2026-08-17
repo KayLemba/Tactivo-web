@@ -14,6 +14,7 @@ function MaestroPage() {
         eyebrow="Tactivo's Control System"
         title="One system. Two ways to run it."
         subtitle="Maestro is the software layer behind Tactivo's fuel infrastructure — connecting your stations, your controllers, and your data into a single, trusted system."
+        bgImage="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=1800&q=70"
       />
       <Maestro />
       <LiveStatus />

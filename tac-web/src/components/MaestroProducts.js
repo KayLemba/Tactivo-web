@@ -28,6 +28,9 @@ const PRODUCTS = [
   },
 ];
 
+// duplicated once so the marquee track can loop seamlessly
+const TRACK = [...PRODUCTS, ...PRODUCTS];
+
 function MaestroProducts() {
   const subheadRef = useReveal();
 
@@ -38,9 +41,12 @@ function MaestroProducts() {
           <h3>The Maestro Product Suite</h3>
           <p>Tactivo's own software products, built to run alongside the hardware.</p>
         </div>
-        <div className="product-grid">
-          {PRODUCTS.map((p) => (
-            <div className="product-card reveal in" key={p.name}>
+      </div>
+
+      <div className="marquee">
+        <div className="marquee-track">
+          {TRACK.map((p, i) => (
+            <div className="product-card" key={`${p.name}-${i}`} aria-hidden={i >= PRODUCTS.length}>
               <div className="product-logo-frame">
                 <img src={p.img} alt={`${p.name} logo`} />
               </div>
