@@ -26,11 +26,11 @@ function Contact() {
             </div>
             <div className="contact-info-item">
               <div className="l">Email</div>
-              <div className="placeholder-note">Add company email address here</div>
+              <div className="placeholder-note">tactivotechnologies@gmail.com</div>
             </div>
             <div className="contact-info-item">
               <div className="l">Phone</div>
-              <div className="placeholder-note">Add company phone number here</div>
+              <div className="placeholder-note">260970106075</div>
             </div>
           </div>
 
