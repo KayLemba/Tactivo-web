@@ -29,6 +29,9 @@ function Navbar() {
           <li><NavLink to="/about" className={navClass} onClick={closeNav}>About</NavLink></li>
           <li><NavLink to="/services" className={navClass} onClick={closeNav}>Services</NavLink></li>
           <li><NavLink to="/maestro" className={navClass} onClick={closeNav}>Maestro</NavLink></li>
+          <li><NavLink to="/projects" className={navClass} onClick={closeNav}>Projects</NavLink></li>
+          <li><NavLink to="/testimonials" className={navClass} onClick={closeNav}>Testimonials</NavLink></li>
+          <li><NavLink to="/faq" className={navClass} onClick={closeNav}>FAQ</NavLink></li>
           <li><NavLink to="/team" className={navClass} onClick={closeNav}>Team</NavLink></li>
           <li><NavLink to="/contact" className="nav-cta" onClick={closeNav}>Get in Touch</NavLink></li>
           <li className="theme-toggle-mobile">

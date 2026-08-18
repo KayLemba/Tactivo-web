@@ -22,15 +22,15 @@ function Contact() {
 
             <div className="contact-info-item">
               <div className="l">Location</div>
-              <div className="v">Lusaka, Zambia — next to Shaan Carriers and General Dealers, Off Mungwi Road</div>
+              <div className="v">Lusaka, Zambia — next to Shaann Carriers, Mungwi Road</div>
             </div>
             <div className="contact-info-item">
               <div className="l">Email</div>
-              <div className="placeholder-note">coming soon</div>
+              <div className="placeholder-note">Add company email address here</div>
             </div>
             <div className="contact-info-item">
               <div className="l">Phone</div>
-              <div className="placeholder-note">coming soon</div>
+              <div className="placeholder-note">Add company phone number here</div>
             </div>
           </div>
 
@@ -60,8 +60,8 @@ function Contact() {
 
         <div className="map-block reveal in">
           <iframe
-            title="Tactivo Technologies location — near Shaan Carriers, Mungwi Road, Lusaka"
-            src="https://www.google.com/maps?q=Shaan\+Carriers,+Mungwi+Road,+Lusaka,+Zambia&output=embed"
+            title="Tactivo Technologies location — near San Carriers, Mungwi Road, Lusaka"
+            src="https://www.google.com/maps?q=San+Carriers,+Mungwi+Road,+Lusaka,+Zambia&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

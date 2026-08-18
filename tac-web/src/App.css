@@ -89,10 +89,10 @@ nav.wrap{
 .brand-name{font-family:var(--font-display); font-weight:600; font-size:1rem; line-height:1.15; letter-spacing:0.01em;}
 .brand-name span{display:block; color:var(--accent); font-weight:500; font-size:0.62em; letter-spacing:0.14em; margin-top:1px;}
 
-.nav-links{display:flex; align-items:center; gap:2.2rem;}
+.nav-links{display:flex; align-items:center; gap:1.5rem;}
 .nav-links a{
-  font-size:0.9rem; color:var(--text-muted); font-weight:500;
-  transition:color .15s ease;
+  font-size:0.86rem; color:var(--text-muted); font-weight:500;
+  transition:color .15s ease; white-space:nowrap;
 }
 .nav-links a:hover{color:var(--text-primary);}
 .nav-links a.active{color:var(--accent);}
@@ -607,6 +607,76 @@ nav.wrap{
   color:var(--accent); text-transform:uppercase;
 }
 
+/* ---------- PROJECTS / CASE STUDIES ---------- */
+.projects-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+.project-card{
+  background:var(--bg-panel); border:1px solid var(--border);
+  border-radius:8px; overflow:hidden;
+  transition:border-color .15s ease;
+}
+.project-card:hover{border-color:var(--border-strong);}
+.project-card-media{aspect-ratio:4/3; overflow:hidden;}
+.project-card-media img{width:100%; height:100%; object-fit:cover; display:block;}
+.project-card-body{padding:20px 22px 24px;}
+.project-tag{
+  font-family:var(--font-mono); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase;
+  color:var(--accent);
+}
+.project-card-body h3{font-size:1.02rem; margin:8px 0 8px;}
+.project-card-body p{color:var(--text-muted); font-size:0.86rem;}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials-note{
+  color:var(--text-faint); font-size:0.78rem; font-style:italic;
+  margin-bottom:36px;
+}
+.testimonials-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+.testimonial-card{
+  background:var(--bg-panel); border:1px solid var(--border);
+  border-radius:8px; padding:26px; margin:0;
+  display:flex; flex-direction:column;
+}
+.testimonial-quote-icon{width:26px; height:26px; stroke:var(--accent); margin-bottom:14px;}
+.testimonial-card p{
+  color:var(--text-primary); font-size:0.94rem; line-height:1.6;
+  flex:1; margin-bottom:20px;
+}
+.testimonial-card footer{display:flex; flex-direction:column; gap:2px;}
+.testimonial-name{font-weight:600; font-size:0.88rem; color:var(--text-primary);}
+.testimonial-role{font-size:0.78rem; color:var(--text-faint);}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px;}
+.faq-item{
+  background:var(--bg-panel); border:1px solid var(--border);
+  border-radius:8px; overflow:hidden;
+}
+.faq-item.open{border-color:var(--border-strong);}
+.faq-question{
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:18px 22px; background:none; border:none; cursor:pointer;
+  text-align:left; font-family:var(--font-body); font-size:0.96rem; font-weight:600;
+  color:var(--text-primary);
+}
+.faq-icon{
+  font-size:1.2rem; color:var(--accent); flex:none; line-height:1;
+}
+.faq-answer{
+  padding:0 22px 20px; color:var(--text-muted); font-size:0.9rem; line-height:1.6;
+}
+
+/* ---------- WHATSAPP BUTTON ---------- */
+.whatsapp-fab{
+  position:fixed; right:22px; bottom:22px; z-index:90;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 24px -8px rgba(0,0,0,0.5);
+  transition:transform .2s ease;
+}
+.whatsapp-fab:hover{transform:scale(1.07);}
+.whatsapp-fab svg{width:28px; height:28px;}
+
 /* ---------- GALLERY ---------- */
 .gallery-grid{
   display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
@@ -677,18 +747,21 @@ textarea{resize:vertical; min-height:110px;}
 .live-status-grid .status-panel{width:420px; max-width:100%; flex:none;}
 
 /* ---------- PARTNERS ---------- */
-.partners-section h3{font-size:1.4rem; margin:8px 0 4px;}
-.partners-note{color:var(--text-muted); font-size:0.86rem; margin-bottom:28px;}
+.partners-section h3{font-size:1.4rem; margin:8px 0 24px;}
 .partners-grid{display:grid; grid-template-columns:repeat(6, 1fr); gap:16px;}
 .partner-slot{
   aspect-ratio:2/1;
-  border:1px dashed var(--border-strong); border-radius:8px;
-  background:var(--bg-panel);
+  border:1px solid var(--border); border-radius:8px;
+  background:#fff;
   display:flex; align-items:center; justify-content:center;
+  padding:20px;
+  transition:border-color .15s ease, transform .15s ease;
 }
-.partner-slot span{
-  font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.04em;
-  color:var(--text-faint); text-transform:uppercase;
+.partner-slot:hover{border-color:var(--border-strong); transform:translateY(-2px);}
+.partner-slot img{
+  max-width:100%; max-height:100%;
+  width:auto; height:auto;
+  object-fit:contain;
 }
 
 /* ---------- CTA BANNER ---------- */
@@ -699,7 +772,7 @@ textarea{resize:vertical; min-height:110px;}
 }
 .cta-banner-row h3{color:#fff; font-size:1.3rem;}
 .btn-cta{
-  background:var(--bg-void); color:#fff;
+  background:#1D1518; color:#fff;
   padding:13px 26px;
 }
 .btn-cta:hover{background:var(--bg-panel-raised);}
@@ -753,6 +826,8 @@ footer{
   .service-detail-copy{order:2 !important;}
   .service-tech-grid{grid-template-columns:1fr;}
   .cap-illustration{width:100px; height:100px;}
+  .projects-grid{grid-template-columns:1fr 1fr;}
+  .testimonials-grid{grid-template-columns:1fr;}
 }
 @media (max-width:680px){
   .nav-links{
@@ -790,4 +865,7 @@ footer{
   .page-header-inner.glass-panel{padding:24px 22px;}
   .partners-grid{grid-template-columns:repeat(2, 1fr);}
   .product-card{width:250px;}
+  .projects-grid{grid-template-columns:1fr;}
+  .whatsapp-fab{right:16px; bottom:16px; width:50px; height:50px;}
+  .whatsapp-fab svg{width:25px; height:25px;}
 }
